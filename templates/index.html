@@ -2,23 +2,67 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="refresh" content="30;url=http://127.0.0.1:55000/">  <!-- Port matches Flask app -->
-        <title>Meme Website</title>
-        <meta name="description" content="">
+        <meta http-equiv="refresh" content="30;url=http://127.0.0.1:55000/">
+        <title>nijo memes</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
         <style>
-            body{ background-color: black;background-repeat: no-repeat;background-position: top left}
-            h1{ text-align: center;font-family: Arial, Helvetica, sans-serif; color: #ffffff;background-color: #000000}
-            p{text-align: center; font-family: Georgia, 'Times New Roman', Times, serif;font-size: 48px;font-style: normal}
+            body { 
+                background-color: black;
+                margin: 0;
+                padding: 20px;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            h1 { 
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                color: #ffffff;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                margin-bottom: 30px;
+            }
+            
+            .meme-container {
+                max-width: 800px;
+                width: 90%;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 15px;
+                padding: 20px;
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+            }
+            
+            .meme-text {
+                color: #ffffff;
+                text-align: center;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 24px;
+                margin: 15px 0;
+            }
+            
+            .meme-image {
+                width: 100%;
+                height: auto;
+                border-radius: 10px;
+                margin: 20px 0;
+            }
+            
+            .subreddit {
+                color: #00ff00;
+                font-size: 18px;
+                text-align: center;
+                font-family: monospace;
+            }
         </style>
     </head>
     <body>
-        <h1> A website for yee who yearn for memes</h1>
-        <p>Here is your meme this will refresh in 30 seconds</p>
-        <p><img src = "{{meme_pic}}"></p>
-        <p>current subreddit:{{subreddit}}</p>
-        
-        <script src="" async defer></script>
+        <h1>Nigel's Meme Paradise</h1>
+        <div class="meme-container">
+            <p class="meme-text">Fresh meme incoming in 30 seconds!</p>
+            <img class="meme-image" src="{{meme_pic}}" alt="Random Meme">
+            <p class="subreddit">r/{{subreddit}}</p>
+        </div>
     </body>
 </html>
