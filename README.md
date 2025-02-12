@@ -1,1 +1,1 @@
-a website to display memes from reddit using the flask webframework
+a website to display memes
